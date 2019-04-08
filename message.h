@@ -1,23 +1,31 @@
 #ifndef MESSAGE_H
 #define MESSAGE_H
 
-#include <iostream>
 #include <stdio.h>
+#include <iostream>
+
 using namespace std;
 
 class Message{
-    public:
+    public: 
         Message();
-        Message(string m, int t): message(m), _time(t){};
-        string get_message();
-        void set_message(string m);
-        int get_time();
-        void set_time(int t);
-        string to_string();
+        Message(string n){};
+//        void SpellCheck(string text);
+        string GetObfuscation();
+//        bool ValdiateObfuscation(string n);
+//        string AutoReply();
+        string GetTimeStamp();
+        void setText(string message);
+        void PrintInfo();
+        void SetTimeStamp();
+        string ToString();
 
     private: 
-        int _time;
-        string message;
+        string timeStamp;           //May not need Hour and min time stamps
+/*        string timeStampHour;
+        string timeStampMin;*/
+        string text; 
+        string obfuscationCode;
 };
 
 #endif
